@@ -5,7 +5,7 @@ import * as _ from "lodash";
 @Component({
     selector: 'ion-calendar',
     template: `
-    <ion-grid swipe($event)>
+    <ion-grid>
         <ion-row justify-content-center>
             <ion-col col-auto (click)="back()">
                 <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
@@ -66,15 +66,6 @@ export class Calendar {
     }
 
     ngAfterContentInit() {
-    }
-
-    swipe(event) {
-        if(event.direction === 2) {
-            this.forward();
-        }
-        if(event.direction === 4) {
-            this.back();
-        }
     }
 
     // Jump to today
